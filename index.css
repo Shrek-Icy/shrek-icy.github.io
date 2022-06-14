@@ -1,0 +1,90 @@
+body {
+    background-color: gray;
+}
+
+header {
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+}
+
+nav {
+    background-color: white;
+    color: antiquewhite;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    border: 5px black solid;
+}
+
+main {
+    background-color: black;
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    border: 5px white solid;
+}
+
+main * {
+    margin: 10px 15px;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+h2 {
+    color: rgb(255, 238, 0);
+    text-align: center;
+}
+
+h3 {
+    color: blueviolet;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    border: 5px white solid;
+    text-align: center;
+}
+
+.track {
+    border: 5px white solid;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.stat {
+    border: 5px white solid;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.stat>div {
+    border: 2px white solid;
+}
+
+.globstat {
+    display: flex;
+}
+
+.globstat>div {
+    border: 2px white solid;
+}
+
+.opt {
+    color: green;
+}
+
+.nonopt {
+    color: red;
+}
+
+.loot {
+    color: gold;
+}
