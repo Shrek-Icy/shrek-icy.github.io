@@ -35,6 +35,10 @@ section {
     flex-flow: row wrap;
 }
 
+section>* {
+    border: 2px white solid;
+}
+
 h2 {
     color: rgb(255, 238, 0);
     text-align: center;
@@ -67,6 +71,10 @@ footer {
 
 .stat>div {
     border: 2px white solid;
+}
+
+.settings {
+    border: 3px white solid;
 }
 
 .globstat {

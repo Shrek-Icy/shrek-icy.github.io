@@ -4,6 +4,7 @@
 <head>
     <title>Map Portal Tracker</title>
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="settings.js"></script>
 </head>
 
 <body>
@@ -18,28 +19,42 @@
     </nav>
 
     <main>
+        <!--Settings for the Forms-->
+        <form class="settings">
+            <fieldset>
+                <legend>Form Settings</legend>
+                <div>
+                    <input type="checkbox" id="optForm" name="optionalform" value="optForm">
+                    <label for="optForm">Optional Tracking Form</label>
+
+                    <input type="checkbox" id="optFormValue" name="optionalform" value="optFormValue">
+                    <label for="optFormValue">Save Optional Info</label>
+
+                    <input type="checkbox" id="optFormValue" name="optionalform" value="optFormValue">
+                    <label for="optFormValue">Use Save Info</label>
+
+                </div>
+
+                <div>
+                    <input type="checkbox" id="lootForm" name="Loot" value="Loot">
+                    <label for="contactChoice1">Loot Tracker Form</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="specForm" name="event" value="special">
+                    <label for="contactChoice1">Special Event Tracking Form</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="gambForm" name="gamble" value="gambling">
+                    <label for="contactChoice1">Gambling Tracking Form</label>
+                </div>
+            </fieldset>
+        </form>
+
         <!--Tracking Form-->
         <h2>Tracking Form:</h2>
         <div class="track">
-
-
-            <div class="settings">
-                <h3>Checkbox Settings</h3>
-                <div>
-                    <div>
-                        <p>Optional Info Form: Shows The Optional Info Form</p>
-                        <div>
-                            <div>
-                                <p>Use Save Info: Only shows if Optional is Selected</p>
-                            </div>
-                        </div>
-                        <p>Loot tracker Form:</p>
-                        <p>Special Event Form:</p>
-                        <p>Gambling Form:</p>
-                    </div>
-                </div>
-            </div>
-
             <section>
                 <div class="nonopt">
                     <!-- Non-Optional Form -->
@@ -57,10 +72,10 @@
                     </div>
                 </div>
 
-                <div class="opt">
+                <div id="optFormValue">
                     <!-- Optional Tracking Info -->
                     <h3>Optional Info:</h3>
-                    <div>
+                    <div class="opt">
                         <p>Data Center:</p>
                         <p>World:</p>
                         <p>Character Name:</p>
@@ -243,7 +258,6 @@
                     </div>
                 </div>
             </section>
-
         </div>
 
         <!--Stats View Port-->
