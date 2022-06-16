@@ -89,6 +89,10 @@ footer {
     color: green;
 }
 
+#hiddenoptform {
+    display: none;
+}
+
 .nonopt {
     color: red;
 }

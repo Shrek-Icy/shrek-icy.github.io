@@ -4,7 +4,11 @@
 <head>
     <title>Map Portal Tracker</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script type="text/javascript" src="settings.js"></script>
+    <script type="text/javascript" src="hideForm.js"></script>
+    <!--  <script>
+        let trigger = document.getElementsByClassName('.trigger');
+        let hidden = document.getElementsByClassName('.hidden_opt_form');
+    </script> -->
 </head>
 
 <body>
@@ -24,30 +28,39 @@
             <fieldset>
                 <legend>Form Settings</legend>
                 <div>
-                    <input type="checkbox" id="optForm" name="optionalform" value="optForm">
-                    <label for="optForm">Optional Tracking Form</label>
 
-                    <input type="checkbox" id="optFormValue" name="optionalform" value="optFormValue">
-                    <label for="optFormValue">Save Optional Info</label>
+                    <input type="checkbox" name="optionalform" onclick="showOptForm()">
+                    <label for="optionalform">Optional Tracking Form</label>
 
-                    <input type="checkbox" id="optFormValue" name="optionalform" value="optFormValue">
-                    <label for="optFormValue">Use Save Info</label>
+                    <div class="hiddenoptform" id="hiddenoptform">
+                        <input type="checkbox" class="hiddenoptform" name="saveinfo">
+                        <label for="saveinfo" class="hiddenoptform">Save Optional Info</label>
+
+                        <input type="checkbox" class="hiddenoptform" name="useinfo">
+                        <label for="useinfo" class="hiddenoptform">Use Save Info</label>
+                    </div>
 
                 </div>
 
                 <div>
+
                     <input type="checkbox" id="lootForm" name="Loot" value="Loot">
                     <label for="contactChoice1">Loot Tracker Form</label>
+
                 </div>
 
                 <div>
+
                     <input type="checkbox" id="specForm" name="event" value="special">
                     <label for="contactChoice1">Special Event Tracking Form</label>
+
                 </div>
 
                 <div>
+
                     <input type="checkbox" id="gambForm" name="gamble" value="gambling">
                     <label for="contactChoice1">Gambling Tracking Form</label>
+
                 </div>
             </fieldset>
         </form>
@@ -72,10 +85,10 @@
                     </div>
                 </div>
 
-                <div id="optFormValue">
+                <div class="hiddenoptform">
                     <!-- Optional Tracking Info -->
                     <h3>Optional Info:</h3>
-                    <div class="opt">
+                    <div>
                         <p>Data Center:</p>
                         <p>World:</p>
                         <p>Character Name:</p>
