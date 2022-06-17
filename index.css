@@ -1,5 +1,4 @@
 body {
-    /* background-color: gray; */
     background-image: url("https://preview.redd.it/b3jif8r7d7z61.png?width=3000&format=png&auto=webp&s=29a49676bd8faf92476465b57c131dd081a55b8b");
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,7 +17,7 @@ header>h1 {
 
 nav,
 nav>* {
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.70);
     text-decoration: none;
     color: antiquewhite;
     display: flex;
