@@ -1,7 +1,7 @@
 function showOptFormSettings() {
     let hidden = document.getElementById('hiddenoptform');
-
-    if (hidden.style.display === "none") {
+    let currDisp = getComputedStyle(document.getElementById('hiddenoptform')).display;
+    if (currDisp === "none") {
         hidden.style.display = 'block';
     } else {
         hidden.style.display = 'none';

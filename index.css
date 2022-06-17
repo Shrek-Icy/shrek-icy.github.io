@@ -98,6 +98,10 @@ footer {
     display: none;
 }
 
+#hiddenoptform>* {
+    border: 2px white solid;
+}
+
 .nonopt {
     color: red;
 }

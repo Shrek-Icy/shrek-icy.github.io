@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Map Portal Tracker</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script type="text/javascript" src="showOptFormSettings.js"></script>
@@ -26,20 +26,21 @@
                 <input type="checkbox" name="optionalforms" onclick="showOptFormSettings()" value="Additional Forms and Statistics">
                 <label for="optionalforms">Additional Forms and Statistics</label>
 
-                <div id="hiddenoptform" style="display:none">
+                <div id="hiddenoptform">
+
+                    <!--style="display:none"-->
+
                     <div>
+                        <input type="checkbox" name="optionalform">
+                        <label for="optionalform">Optional Tracking Form</label>
                         <div>
                             <input type="checkbox" name="saveinfo">
                             <label for="saveinfo">Save Optional Info</label>
 
                             <input type="checkbox" name="useinfo">
                             <label for="useinfo">Use Save Info</label>
-                        </div>
-                    </div>
 
-                    <div>
-                        <input type="checkbox" name="optionalform">
-                        <label for="optionalform">Optional Tracking Form</label>
+                        </div>
                     </div>
 
                     <div>
