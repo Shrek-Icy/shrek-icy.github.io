@@ -1,11 +1,14 @@
 body {
-    background-color: gray;
+    /* background-color: gray; */
+    background-image: url("https://preview.redd.it/b3jif8r7d7z61.png?width=3000&format=png&auto=webp&s=29a49676bd8faf92476465b57c131dd081a55b8b");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
-    background-color: black;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.70);
 }
 
 header>h1 {
@@ -27,7 +30,6 @@ nav>* {
 }
 
 main {
-    background-color: black;
     color: antiquewhite;
     border: 5px white solid;
 }
@@ -43,20 +45,22 @@ section {
 
 section>* {
     border: 2px white solid;
+    background-color: rgba(0, 0, 0, 0.70);
 }
 
-h2 {
+.forms h2 {
     color: rgb(255, 238, 0);
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.70);
+    width: 100%;
 }
 
 h3 {
-    color: blueviolet;
+    color: whitesmoke;
     text-align: center;
 }
 
 footer {
-    background-color: black;
     color: white;
     border: 5px white solid;
     text-align: center;
@@ -86,6 +90,7 @@ footer {
     width: 330px;
     float: left;
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.70);
 }
 
 .globstat {
@@ -100,10 +105,6 @@ footer {
     display: none;
 }
 
-.optform {
-    color: green;
-}
-
 #hiddenoptform {
     display: none;
 }
@@ -112,12 +113,7 @@ footer {
     border: 2px white solid;
 }
 
-.nonopt {
-    color: red;
-}
-
-.loot {
-    color: gold;
+#loot {
     display: none;
 }
 
@@ -126,17 +122,16 @@ footer {
     display: none;
 }
 
-.gamble {
+#gamble {
     display: none;
 }
 
-.events {
+#events {
     display: none;
 }
 
 .forms {
     margin: 0px auto 0px 364px;
-    background-color: black;
     color: antiquewhite;
     align-items: center;
     flex-flow: column wrap;

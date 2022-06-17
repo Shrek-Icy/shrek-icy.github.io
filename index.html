@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
 <html lang="en">
 
 <head>
@@ -57,24 +58,24 @@
                 <!--Optional Loot Form-->
                 <div>
 
-                    <input type="checkbox" id="lootform" name="Lootform" value="Loot">
+                    <input type="checkbox" id="lootform" name="Lootform" value="Loot" onclick="showLootForm()">
                     <label for="lootform">Loot Tracker Form</label>
-
-                </div>
-
-                <!--Optional Event Form-->
-                <div>
-
-                    <input type="checkbox" id="specForm" name="specForm" value="special">
-                    <label for="specForm">Special Event Tracking Form</label>
 
                 </div>
 
                 <!--Optional Gambling form-->
                 <div>
 
-                    <input type="checkbox" id="gambForm" name="gambForm" value="gambling">
+                    <input type="checkbox" id="gambForm" name="gambForm" value="gambling" onclick="showGambleForm()">
                     <label for="gambForm">Gambling Tracking Form</label>
+
+                </div>
+
+                <!--Optional Event Form-->
+                <div>
+
+                    <input type="checkbox" id="specForm" name="specForm" value="special" onclick="showEventForm()">
+                    <label for="specForm">Special Event Tracking Form</label>
 
                 </div>
 
@@ -84,13 +85,13 @@
         <!-- Forms -->
         <div class="forms">
             <!--Tracking Form-->
-            <h2>Tracking Form(s):</h2>
+            <h2>Tracking Form(s)</h2>
 
             <div class="track">
                 <section>
-                    <div class="nonopt">
+                    <!-- Non-Optional Form -->
+                    <div>
 
-                        <!-- Non-Optional Form -->
                         <h3>Basic Info:</h3>
 
                         <!-- Map Drop Down -->
@@ -117,16 +118,47 @@
                         <!-- Portal -->
                         <p>Portal: Y/N?</p>
                         <div>
-                            <p>Room 1 Door: L/R</p>
-                            <p>Room 2 Door: L/R</p>
-                            <p>Room 3 Door: L/R</p>
-                            <p>Room 4 Door: L/R</p>
-                            <p>Room 5 Comp: Y/N</p>
+                            <p>Room 1 Door:</p>
+                            <form>
+                                <input type="radio" id="dooroneleft" name="dooroneleft" value="left">
+                                <label for="dooroneleft">Left</label>
+                                <input type="radio" id="dooroneright" name="dooroneright" value="right">
+                                <label for="dooroneright">Right</label>
+                            </form>
+                            <p>Room 2 Door:</p>
+                            <form>
+                                <input type="radio" id="doortwoleft" name="doortwoleft" value="left">
+                                <label for="doortwoleft">Left</label>
+                                <input type="radio" id="doortworight" name="doortworight" value="right">
+                                <label for="doortworight">Right</label>
+                            </form>
+                            <p>Room 3 Door:</p>
+                            <form>
+                                <input type="radio" id="doorthreeleft" name="doorthreeleft" value="left">
+                                <label for="doorthreeleft">Left</label>
+                                <input type="radio" id="doorthreeright" name="doorthreeright" value="right">
+                                <label for="doorthreeright">Right</label>
+                            </form>
+                            <p>Room 4 Door:</p>
+                            <form>
+                                <input type="radio" id="doorfourleft" name="doorfourleft" value="left">
+                                <label for="doorfourleft">Left</label>
+                                <input type="radio" id="doorfourright" name="doorfourright" value="right">
+                                <label for="doorfourright">Right</label>
+                            </form>
+                            <p>Room 5 Comp:</p>
+                            <form>
+                                <input type="radio" id="doorfiveyes" name="doorfiveyes" value="yes">
+                                <label for="doorfiveyes">Yes</label>
+                                <input type="radio" id="doorfiveno" name="doorfiveno" value="no">
+                                <label for="doorfiveno">No</label>
+                            </form>
                         </div>
                     </div>
 
-                    <div id="optform" class="optform">
-                        <!-- Optional Tracking Info -->
+                    <!-- Optional Tracking Info -->
+                    <div id="optform">
+
                         <h3>Additional Info:</h3>
                         <div>
                             <p>Data Center:</p>
@@ -145,7 +177,8 @@
 
                     </div>
 
-                    <div class="loot">
+                    <!-- Optional Loot Form -->
+                    <div id="loot">
                         <h3>Special Loot tracker Form:</h3>
                         <div>
                             <p>Room 1:</p>
@@ -209,7 +242,8 @@
                         </div>
                     </div>
 
-                    <div class="gamble">
+                    <!-- optional Gambling Form-->
+                    <div id="gamble">
                         <h3>Gambling Form:</h3>
                         <div>
                             <p>Room(s):</p>
@@ -253,7 +287,8 @@
                         </div>
                     </div>
 
-                    <div class="events">
+                    <!-- Optional Event Form-->
+                    <div id="events">
                         <h3>Special Events Form:</h3>
                         <div>
                             <p>Room 1 Event: Y/N?</p>
@@ -314,6 +349,8 @@
             </div>
             <input type="button" id="submitform" class="submitform" value="Submit information to be tracked">
         </div>
+
+        <!--Stats View Port-->
         <div>
             <!--Stats View Port-->
             <h2>Statistics:</h2>

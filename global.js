@@ -11,20 +11,6 @@ const on = (function() {
     }
 }());
 
-/* // find the element
-var el = document.getElementById("btn");
-
-// add the first listener
-on(el, "click", function() {
-    alert("foo");
-});
-
-// add the second listener
-on(el, "click", function() {
-    alert("bar");
-});
-*/
-
 // Display optional forms
 function showOptForms() {
     let trigger = document.getElementById('optforms');
@@ -62,10 +48,32 @@ function showOptForm() {
     });
 };
 
-// Displays the additional information form.
-function showAddInfoForm() {
-    let hidden = document.getElementById('optform');
-    let currDisp = getComputedStyle(document.getElementById('optform')).display;
+// Displays the loot tracking form
+function showLootForm() {
+    let hidden = document.getElementById('loot');
+    let currDisp = getComputedStyle(document.getElementById('loot')).display;
+    if (currDisp === "none") {
+        hidden.style.display = 'block';
+    } else {
+        hidden.style.display = 'none';
+    };
+};
+
+// displays the gamble tracking form
+function showGambleForm() {
+    let hidden = document.getElementById('gamble');
+    let currDisp = getComputedStyle(document.getElementById('gamble')).display;
+    if (currDisp === "none") {
+        hidden.style.display = 'block';
+    } else {
+        hidden.style.display = 'none';
+    };
+};
+
+//displays the event tracking form
+function showEventForm() {
+    let hidden = document.getElementById('events');
+    let currDisp = getComputedStyle(document.getElementById('events')).display;
     if (currDisp === "none") {
         hidden.style.display = 'block';
     } else {
