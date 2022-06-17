@@ -1,4 +1,7 @@
-/* $(function() {
+/* failed test codes to get a checkbox to show/hide elements  
+
+
+ $(function() {
 
     // Get the form fields and hidden div
     var checkbox = document.querySelectorAll('.trigger');
@@ -38,7 +41,7 @@
     });
 });
 
-/* function optform() {
+ function optform() {
 
     // This first is to focus on the trigger
     // Second is to link what area needs to show
@@ -56,15 +59,15 @@
             hidden.hide();
         };
     });
-};*/
+};
 
-/* fuction check() {
+ fuction check() {
     if (document.getElementById('checked').checked) {
         document.getElementById('yes').style.visibility = 'visible'; 
     } else (document.getElementById('yes').style.visibility = 'hidden';)
-} */
+} 
 
-/* const otherCheckbox = document.querySelector('#optForm');
+ const otherCheckbox = document.querySelector('#optForm');
 
 const otherText = document.querySelector('#optFormValue');
 
@@ -77,9 +80,9 @@ otherCheckbox.addEventListener('change', () => {
     } else {
         otherText.style.visibility = 'hidden';
     }
-}); */
+}); 
 
-/* function hideForm() {
+ function hideForm() {
 //    let trigger = document.getElementsByClassName('.trigger');
 //    let hiddenForm = document.getElementsByClassName('.hidden_opt_form');
 //
@@ -94,13 +97,33 @@ otherCheckbox.addEventListener('change', () => {
 
 // hideForm();
 
-*/
 
-/* if (document.getElementsByClassName("hiddenoptform").style.display === "none") {
+
+ if (document.getElementsByClassName("hiddenoptform").style.display === "none") {
         document.getElementsByClassName("hiddenoptform").style.display = "block";
     } else {
         document.getElementsByClassName("hiddenoptform").style.display = "none";
     };
-    */
+    
 
-/* alert("This alert box is to notify that JS file is being read"); */
+ alert("This alert box is to notify that JS file is being read"); 
+
+  if (hidden.style.display === 'none') {
+          hidden.style.display = 'block';
+      } else {
+          hidden.style.display = 'none';
+      };  
+      
+
+// let hidden = document.getElementById('hiddenoptform');
+// let stydis = getComputedStyle(hidden);
+// hidden.style.display = 'block';
+
+
+// console.log(stydis.display);
+// console.log(hidden.style.display);
+// console.log("trigger");
+// hidden.style.display = 'block';
+// alert("This alert box is to notify that JS file is being read");
+
+*/
