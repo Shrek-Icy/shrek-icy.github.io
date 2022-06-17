@@ -72,5 +72,3 @@ function showAddInfoForm() {
         hidden.style.display = 'none';
     };
 };
-
-//
