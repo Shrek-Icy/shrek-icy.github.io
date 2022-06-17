@@ -1,0 +1,9 @@
+function showAddInfoForm() {
+    let hidden = document.getElementById('optform');
+    let currDisp = getComputedStyle(document.getElementById('optform')).display;
+    if (currDisp === "none") {
+        hidden.style.display = 'block';
+    } else {
+        hidden.style.display = 'none';
+    };
+};

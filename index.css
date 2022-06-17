@@ -85,7 +85,7 @@ footer {
     border: 3px white solid;
     width: 330px;
     float: left;
-    position: fixed;
+    position: absolute;
 }
 
 .globstat {
@@ -96,9 +96,12 @@ footer {
     border: 2px white solid;
 }
 
+#optform {
+    display: none;
+}
+
 .optform {
     color: green;
-    display: none;
 }
 
 #hiddenoptform {
@@ -118,8 +121,9 @@ footer {
     display: none;
 }
 
-.border {
+#optinfosetting {
     border: 3px white solid;
+    display: none;
 }
 
 .gamble {
@@ -131,7 +135,7 @@ footer {
 }
 
 .forms {
-    margin: 0px auto;
+    margin: 0px auto 0px 364px;
     background-color: black;
     color: antiquewhite;
     align-items: center;
