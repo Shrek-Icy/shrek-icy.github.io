@@ -13,16 +13,16 @@ const on = (function() {
 
 // Display optional forms
 function showOptForms() {
-    let trigger = document.getElementById('optforms');
     let hidden = document.getElementById('hiddenoptform');
     let currDisp = getComputedStyle(document.getElementById('hiddenoptform')).display;
-    on(trigger, "change", function() {
-        if (currDisp === "none") {
-            return hidden.style.display = 'block';
-        } else {
-            return hidden.style.display = 'none';
-        };
-    });
+    let checkbox = document.getElementsByClassName('checkbox')[0];
+    if (currDisp === "none") {
+        hidden.style.display = 'block';
+        checkbox.checked = true;
+    } else {
+        hidden.style.display = 'none';
+        checkbox.checked = false;
+    };
 };
 
 // Displays the additional info form settings

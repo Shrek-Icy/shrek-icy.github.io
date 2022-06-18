@@ -7,19 +7,23 @@
     <title>Map Portal Tracker</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <script language="javascript" type="text/javascript" src="global.js"></script>
-    <!--<script type="text/javascript" src="showOptForms.js"></script>-->
+    <script language="javascript" type="text/javascript" src="openallscript.js"></script>
 </head>
 
 <body>
+    <!--Adult container/next level child-->
 
     <header>
-
-        <h1>Treasure Map Tracker (Timeworn Kumbhiraskin Map)</h1>
+        <!--Adult/Child container/next level child-->
+        <h1>Treasure Map Tracker</h1>
+        <h1>(Timeworn Kumbhiraskin Map)</h1>
 
     </header>
 
-    <nav>
+    <br>
 
+    <nav>
+        <!--Adult/Child container/next level child-->
         <a href="#">Tracker</a>
 
         <a href="#">Statistics</a>
@@ -28,76 +32,82 @@
 
     </nav>
 
+    <br>
+
     <main>
+        <!--Settings and Forms-->
+        <section>
+            <!--Adult/Child container/next level child-->
+            <!--Settings for the Forms-->
+            <form class="settings">
 
-        <!--Settings for the Forms-->
-        <form class="settings">
+                <input type="checkbox" id="optforms" name="optforms" onclick="showOptForms()" value="Additional Forms and Statistics" class="checkbox">
+                <label for="optforms">Additional Forms</label>
 
-            <input type="checkbox" id="optforms" name="optforms" onclick="showOptForms()" value="Additional Forms and Statistics">
-            <label for="optforms">Additional Forms</label>
+                <input type="button" id="showallform" class="showallform" value="Open All" onclick="showAllForms()">
 
-            <div id="hiddenoptform">
+                <div id="hiddenoptform">
 
-                <!--Optional Tracking Form-->
-                <div>
-
-                    <input type="checkbox" id="optionalform" name="optionalform" onclick="showOptForm()" value="Optional Tracking Form">
-                    <label for="optionalform">Optional Tracking Form</label>
-                    <!-- Optional form settings -->
-                    <div id="optinfosetting">
-
-                        <input type="checkbox" id="saveinfo" name="saveinfo" value="Save Optional Info">
-                        <label for="saveinfo">Save Optional Info</label>
-
-                        <input type="checkbox" id="useinfo" name="useinfo" value="Use Saved Info">
-                        <label for="useinfo">Use Saved Info</label>
-
-                    </div>
-                </div>
-
-                <!--Optional Loot Form-->
-                <div>
-
-                    <input type="checkbox" id="lootform" name="Lootform" value="Loot" onclick="showLootForm()">
-                    <label for="lootform">Loot Tracker Form</label>
-
-                </div>
-
-                <!--Optional Gambling form-->
-                <div>
-
-                    <input type="checkbox" id="gambForm" name="gambForm" value="gambling" onclick="showGambleForm()">
-                    <label for="gambForm">Gambling Tracking Form</label>
-
-                </div>
-
-                <!--Optional Event Form-->
-                <div>
-
-                    <input type="checkbox" id="specForm" name="specForm" value="special" onclick="showEventForm()">
-                    <label for="specForm">Special Event Tracking Form</label>
-
-                </div>
-
-            </div>
-        </form>
-
-        <!-- Forms -->
-        <div class="forms">
-            <!--Tracking Form-->
-            <h2>Tracking Form(s)</h2>
-
-            <div class="track">
-                <section>
-                    <!-- Non-Optional Form -->
+                    <!--Optional Tracking Form button-->
                     <div>
 
-                        <h3>Basic Info:</h3>
+                        <input type="checkbox" id="optionalform" name="optionalform" value="Optional Tracking Form" onclick="showOptForm()" class="checkbox">
+                        <label for="optionalform">Optional Tracking Form</label>
+                        <!-- Optional form settings -->
+                        <div id="optinfosetting">
 
-                        <!-- Map Drop Down -->
-                        <form>
-                            <label for="nonoptmaps">Map:</label>
-                            <select name="nonoptmaps" id="nonoptmaps">
+                            <input type="checkbox" id="saveinfo" name="saveinfo" value="Save Optional Info">
+                            <label for="saveinfo">Save Optional Info</label>
+
+                            <input type="checkbox" id="useinfo" name="useinfo" value="Use Saved Info">
+                            <label for="useinfo">Use Saved Info</label>
+
+                        </div>
+                    </div>
+
+                    <!--Optional Loot Form button-->
+                    <div>
+
+                        <input type="checkbox" id="lootform" name="Lootform" value="Loot" onclick="showLootForm()" class="checkbox">
+                        <label for="lootform">Loot Tracker Form</label>
+
+                    </div>
+
+                    <!--Optional Gambling form button-->
+                    <div>
+
+                        <input type="checkbox" id="gambForm" name="gambForm" value="gambling" onclick="showGambleForm()" class="checkbox">
+                        <label for="gambForm">Gambling Tracking Form</label>
+
+                    </div>
+
+                    <!--Optional Event Form button-->
+                    <div>
+
+                        <input type="checkbox" id="specForm" name="specForm" value="special" onclick="showEventForm()" class="checkbox">
+                        <label for="specForm">Special Event Tracking Form</label>
+
+                    </div>
+
+                </div>
+            </form>
+
+            <!-- Forms -->
+            <div class="forms">
+                <!--Tracking Form-->
+                <h2>Tracking Form(s)</h2>
+
+                <div class="track">
+                    <section>
+                        <!-- Non-Optional Form -->
+                        <div>
+
+                            <h3>Basic Info:</h3>
+
+                            <!-- Map Drop Down -->
+                            <form>
+                                <label for="nonoptmaps">Map:</label>
+                                <select name="nonoptmaps" id="nonoptmaps">
                             <option value="Labyrinthos">Labyrinthos</option>
                             <option value="Thavnair">Thavnair</option>
                             <option value="Garlemald">Garlemald</option>
@@ -105,254 +115,255 @@
                             <option value="Elpis">Elpis</option>
                             <option value="Ultima Thule">Ultima Thule</option>
                         </select>
-                        </form>
-
-                        <!-- Coords -->
-
-                        <!-- Party Size -->
-                        <form>
-                            <label for="partysize">Party Size:</label>
-                            <input type="number" id="partysize" name="partsize" min="1" max="8">
-                        </form>
-
-                        <!-- Portal -->
-                        <p>Portal: Y/N?</p>
-                        <div>
-                            <p>Room 1 Door:</p>
-                            <form>
-                                <input type="radio" id="dooroneleft" name="dooroneleft" value="left">
-                                <label for="dooroneleft">Left</label>
-                                <input type="radio" id="dooroneright" name="dooroneright" value="right">
-                                <label for="dooroneright">Right</label>
                             </form>
-                            <p>Room 2 Door:</p>
-                            <form>
-                                <input type="radio" id="doortwoleft" name="doortwoleft" value="left">
-                                <label for="doortwoleft">Left</label>
-                                <input type="radio" id="doortworight" name="doortworight" value="right">
-                                <label for="doortworight">Right</label>
-                            </form>
-                            <p>Room 3 Door:</p>
-                            <form>
-                                <input type="radio" id="doorthreeleft" name="doorthreeleft" value="left">
-                                <label for="doorthreeleft">Left</label>
-                                <input type="radio" id="doorthreeright" name="doorthreeright" value="right">
-                                <label for="doorthreeright">Right</label>
-                            </form>
-                            <p>Room 4 Door:</p>
-                            <form>
-                                <input type="radio" id="doorfourleft" name="doorfourleft" value="left">
-                                <label for="doorfourleft">Left</label>
-                                <input type="radio" id="doorfourright" name="doorfourright" value="right">
-                                <label for="doorfourright">Right</label>
-                            </form>
-                            <p>Room 5 Comp:</p>
-                            <form>
-                                <input type="radio" id="doorfiveyes" name="doorfiveyes" value="yes">
-                                <label for="doorfiveyes">Yes</label>
-                                <input type="radio" id="doorfiveno" name="doorfiveno" value="no">
-                                <label for="doorfiveno">No</label>
-                            </form>
-                        </div>
-                    </div>
 
-                    <!-- Optional Tracking Info -->
-                    <div id="optform">
+                            <!-- Coords -->
 
-                        <h3>Additional Info:</h3>
-                        <div>
-                            <p>Data Center:</p>
-                            <p>World:</p>
-                            <p>Character Name:</p>
-                            <p>Playstyles:</p>
+                            <!-- Party Size -->
+                            <form>
+                                <label for="partysize">Party Size:</label>
+                                <input type="number" id="partysize" name="partsize" min="1" max="8">
+                            </form>
+
+                            <!-- Portal -->
+                            <p>Portal: Y/N?</p>
                             <div>
-                                <p>Style</p>
-                                <p>Style</p>
-                                <p>Style</p>
-                                <p>Style</p>
-                                <p>Style</p>
-                                <p>Style</p>
+                                <p>Room 1 Door:</p>
+                                <form>
+                                    <input type="radio" id="dooroneleft" name="dooroneleft" value="left">
+                                    <label for="dooroneleft">Left</label>
+                                    <input type="radio" id="dooroneright" name="dooroneright" value="right">
+                                    <label for="dooroneright">Right</label>
+                                </form>
+                                <p>Room 2 Door:</p>
+                                <form>
+                                    <input type="radio" id="doortwoleft" name="doortwoleft" value="left">
+                                    <label for="doortwoleft">Left</label>
+                                    <input type="radio" id="doortworight" name="doortworight" value="right">
+                                    <label for="doortworight">Right</label>
+                                </form>
+                                <p>Room 3 Door:</p>
+                                <form>
+                                    <input type="radio" id="doorthreeleft" name="doorthreeleft" value="left">
+                                    <label for="doorthreeleft">Left</label>
+                                    <input type="radio" id="doorthreeright" name="doorthreeright" value="right">
+                                    <label for="doorthreeright">Right</label>
+                                </form>
+                                <p>Room 4 Door:</p>
+                                <form>
+                                    <input type="radio" id="doorfourleft" name="doorfourleft" value="left">
+                                    <label for="doorfourleft">Left</label>
+                                    <input type="radio" id="doorfourright" name="doorfourright" value="right">
+                                    <label for="doorfourright">Right</label>
+                                </form>
+                                <p>Room 5 Comp:</p>
+                                <form>
+                                    <input type="radio" id="doorfiveyes" name="doorfiveyes" value="yes">
+                                    <label for="doorfiveyes">Yes</label>
+                                    <input type="radio" id="doorfiveno" name="doorfiveno" value="no">
+                                    <label for="doorfiveno">No</label>
+                                </form>
                             </div>
                         </div>
 
-                    </div>
+                        <!-- Optional Tracking Info -->
+                        <div id="optform">
 
-                    <!-- Optional Loot Form -->
-                    <div id="loot">
-                        <h3>Special Loot tracker Form:</h3>
-                        <div>
-                            <p>Room 1:</p>
+                            <h3>Additional Info:</h3>
                             <div>
-                                <p>Gamble: Y/N?</p>
+                                <p>Data Center:</p>
+                                <p>World:</p>
+                                <p>Character Name:</p>
+                                <p>Playstyles:</p>
                                 <div>
+                                    <p>Style</p>
+                                    <p>Style</p>
+                                    <p>Style</p>
+                                    <p>Style</p>
+                                    <p>Style</p>
+                                    <p>Style</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Optional Loot Form -->
+                        <div id="loot">
+                            <h3>Special Loot tracker Form:</h3>
+                            <div>
+                                <p>Room 1:</p>
+                                <div>
+                                    <p>Gamble: Y/N?</p>
                                     <div>
-                                        <p>Loot:</p>
+                                        <div>
+                                            <p>Loot:</p>
+                                        </div>
+                                    </div>
+                                    <p>Special Loot:</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Room 2:</p>
+                                <div>
+                                    <p>Gamble: Y/N?</p>
+                                    <div>
+                                        <div>
+                                            <p>Loot:</p>
+                                        </div>
+                                    </div>
+                                    <p>Special Loot:</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Room 3:</p>
+                                <div>
+                                    <p>Gamble: Y/N?</p>
+                                    <div>
+                                        <div>
+                                            <p>Loot:</p>
+                                        </div>
+                                    </div>
+                                    <p>Special Loot:</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Room 4:</p>
+                                <div>
+                                    <p>Gamble: Y/N?</p>
+                                    <div>
+                                        <div>
+                                            <p>Loot:</p>
+                                        </div>
+                                    </div>
+                                    <p>Special Loot:</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Room 5:</p>
+                                <div>
+                                    <p>Gamble: Y/N?</p>
+                                    <div>
+                                        <div>
+                                            <p>Loot:</p>
+                                        </div>
+                                    </div>
+                                    <p>Special Loot:</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- optional Gambling Form-->
+                        <div id="gamble">
+                            <h3>Gambling Form:</h3>
+                            <div>
+                                <p>Room(s):</p>
+                                <div>
+                                    <p>Room 1</p>
+                                    <div>
+                                        <p>Card 1 #:</p>
+                                        <p>Card 2 #:</p>
+                                        <p>Card 3 #:</p>
+                                        <p>Card 4 #:</p>
+                                    </div>
+                                    <p>Room 2</p>
+                                    <div>
+                                        <p>Card 1 #:</p>
+                                        <p>Card 2 #:</p>
+                                        <p>Card 3 #:</p>
+                                        <p>Card 4 #:</p>
+                                    </div>
+                                    <p>Room 3</p>
+                                    <div>
+                                        <p>Card 1 #:</p>
+                                        <p>Card 2 #:</p>
+                                        <p>Card 3 #:</p>
+                                        <p>Card 4 #:</p>
+                                    </div>
+                                    <p>Room 4</p>
+                                    <div>
+                                        <p>Card 1 #:</p>
+                                        <p>Card 2 #:</p>
+                                        <p>Card 3 #:</p>
+                                        <p>Card 4 #:</p>
+                                    </div>
+                                    <p>Room 5</p>
+                                    <div>
+                                        <p>Card 1 #:</p>
+                                        <p>Card 2 #:</p>
+                                        <p>Card 3 #:</p>
+                                        <p>Card 4 #:</p>
                                     </div>
                                 </div>
-                                <p>Special Loot:</p>
                             </div>
                         </div>
-                        <div>
-                            <p>Room 2:</p>
-                            <div>
-                                <p>Gamble: Y/N?</p>
-                                <div>
-                                    <div>
-                                        <p>Loot:</p>
-                                    </div>
-                                </div>
-                                <p>Special Loot:</p>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Room 3:</p>
-                            <div>
-                                <p>Gamble: Y/N?</p>
-                                <div>
-                                    <div>
-                                        <p>Loot:</p>
-                                    </div>
-                                </div>
-                                <p>Special Loot:</p>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Room 4:</p>
-                            <div>
-                                <p>Gamble: Y/N?</p>
-                                <div>
-                                    <div>
-                                        <p>Loot:</p>
-                                    </div>
-                                </div>
-                                <p>Special Loot:</p>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Room 5:</p>
-                            <div>
-                                <p>Gamble: Y/N?</p>
-                                <div>
-                                    <div>
-                                        <p>Loot:</p>
-                                    </div>
-                                </div>
-                                <p>Special Loot:</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- optional Gambling Form-->
-                    <div id="gamble">
-                        <h3>Gambling Form:</h3>
-                        <div>
-                            <p>Room(s):</p>
+                        <!-- Optional Event Form-->
+                        <div id="events">
+                            <h3>Special Events Form:</h3>
                             <div>
-                                <p>Room 1</p>
+                                <p>Room 1 Event: Y/N?</p>
                                 <div>
-                                    <p>Card 1 #:</p>
-                                    <p>Card 2 #:</p>
-                                    <p>Card 3 #:</p>
-                                    <p>Card 4 #:</p>
+                                    <p>Event Type:</p>
+                                    <div>
+                                        <p>Rainbow Golem</p>
+                                        <p>Golden Supporter</p>
+                                        <p>Dungeon Queen</p>
+                                    </div>
                                 </div>
-                                <p>Room 2</p>
+                            </div>
+                            <div>
+                                <p>Room 2 Event: Y/N?</p>
                                 <div>
-                                    <p>Card 1 #:</p>
-                                    <p>Card 2 #:</p>
-                                    <p>Card 3 #:</p>
-                                    <p>Card 4 #:</p>
+                                    <p>Event Type:</p>
+                                    <div>
+                                        <p>Rainbow Golem</p>
+                                        <p>Golden Supporter</p>
+                                        <p>Dungeon Queen</p>
+                                    </div>
                                 </div>
-                                <p>Room 3</p>
+                            </div>
+                            <div>
+                                <p>Room 3 Event: Y/N?</p>
                                 <div>
-                                    <p>Card 1 #:</p>
-                                    <p>Card 2 #:</p>
-                                    <p>Card 3 #:</p>
-                                    <p>Card 4 #:</p>
+                                    <p>Event Type:</p>
+                                    <div>
+                                        <p>Rainbow Golem</p>
+                                        <p>Golden Supporter</p>
+                                        <p>Dungeon Queen</p>
+                                    </div>
                                 </div>
-                                <p>Room 4</p>
+                            </div>
+                            <div>
+                                <p>Room 4 Event: Y/N?</p>
                                 <div>
-                                    <p>Card 1 #:</p>
-                                    <p>Card 2 #:</p>
-                                    <p>Card 3 #:</p>
-                                    <p>Card 4 #:</p>
+                                    <p>Event Type:</p>
+                                    <div>
+                                        <p>Rainbow Golem</p>
+                                        <p>Golden Supporter</p>
+                                        <p>Dungeon Queen</p>
+                                    </div>
                                 </div>
-                                <p>Room 5</p>
+                            </div>
+                            <div>
+                                <p>Room 5 Event/Boss: Y/N?</p>
+                                <p>Boss Type: drop down</p>
+                                <p>Special Event Type: Y/N</p>
                                 <div>
-                                    <p>Card 1 #:</p>
-                                    <p>Card 2 #:</p>
-                                    <p>Card 3 #:</p>
-                                    <p>Card 4 #:</p>
+                                    <p>Rainbow Golem:</p>
+                                    <p>Golden Supporter:</p>
+                                    <p>Dungeon Queen:</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Optional Event Form-->
-                    <div id="events">
-                        <h3>Special Events Form:</h3>
-                        <div>
-                            <p>Room 1 Event: Y/N?</p>
-                            <div>
-                                <p>Event Type:</p>
-                                <div>
-                                    <p>Rainbow Golem</p>
-                                    <p>Golden Supporter</p>
-                                    <p>Dungeon Queen</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Room 2 Event: Y/N?</p>
-                            <div>
-                                <p>Event Type:</p>
-                                <div>
-                                    <p>Rainbow Golem</p>
-                                    <p>Golden Supporter</p>
-                                    <p>Dungeon Queen</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Room 3 Event: Y/N?</p>
-                            <div>
-                                <p>Event Type:</p>
-                                <div>
-                                    <p>Rainbow Golem</p>
-                                    <p>Golden Supporter</p>
-                                    <p>Dungeon Queen</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Room 4 Event: Y/N?</p>
-                            <div>
-                                <p>Event Type:</p>
-                                <div>
-                                    <p>Rainbow Golem</p>
-                                    <p>Golden Supporter</p>
-                                    <p>Dungeon Queen</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <p>Room 5 Event/Boss: Y/N?</p>
-                            <p>Boss Type: drop down</p>
-                            <p>Special Event Type: Y/N</p>
-                            <div>
-                                <p>Rainbow Golem:</p>
-                                <p>Golden Supporter:</p>
-                                <p>Dungeon Queen:</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
+                <input type="button" id="submitform" class="submitform" value="Submit information to be tracked">
             </div>
-            <input type="button" id="submitform" class="submitform" value="Submit information to be tracked">
-        </div>
+        </section>
 
-        <!--Stats View Port-->
+        <!--  Stats View Port
         <div>
-            <!--Stats View Port-->
+           
 
             <div class="stat">
                 <h2>Statistics:</h2>
@@ -395,8 +406,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
     </main>
+
+    <br>
 
     <footer id="contact">
         <div>

@@ -4,9 +4,9 @@
  $(function() {
 
     // Get the form fields and hidden div
-    var checkbox = document.querySelectorAll('.trigger');
-    var hidden = document.querySelectorAll('.hidden_opt_form');
-    // var populate = $("#populate");
+    var checkbox document.querySelectorAll('.trigger');
+    var hidden document.querySelectorAll('.hidden_opt_form');
+    // var populate $("#populate");
 
     // Hide the fields.
     // Use JS to do this in case the user doesn't have JS 
@@ -45,8 +45,8 @@
 
     // This first is to focus on the trigger
     // Second is to link what area needs to show
-    var checkbox = $("#trigger");
-    var hidden = $("#hiddenoptform");
+    var checkbox $("#trigger");
+    var hidden $("#hiddenoptform");
 
     // This is to hide the hidden field
     hidden.hide();
@@ -63,35 +63,35 @@
 
  fuction check() {
     if (document.getElementById('checked').checked) {
-        document.getElementById('yes').style.visibility = 'visible'; 
-    } else (document.getElementById('yes').style.visibility = 'hidden';)
+        document.getElementById('yes').style.visibility 'visible'; 
+    } else (document.getElementById('yes').style.visibility 'hidden';)
 } 
 
- const otherCheckbox = document.querySelector('#optForm');
+ const otherCheckbox document.querySelector('#optForm');
 
-const otherText = document.querySelector('#optFormValue');
+const otherText document.querySelector('#optFormValue');
 
-otherText.style.visibility = 'hidden';
+otherText.style.visibility 'hidden';
 
-otherCheckbox.addEventListener('change', () => {
+otherCheckbox.addEventListener('change', ()> {
     if (otherCheckbox.checked) {
-        otherText.style.visibility = 'visible';
-        otherText.value = '';
+        otherText.style.visibility 'visible';
+        otherText.value '';
     } else {
-        otherText.style.visibility = 'hidden';
+        otherText.style.visibility 'hidden';
     }
 }); 
 
  function hideForm() {
-//    let trigger = document.getElementsByClassName('.trigger');
-//    let hiddenForm = document.getElementsByClassName('.hidden_opt_form');
+//     trigger document.getElementsByClassName('.trigger');
+//     hiddenForm document.getElementsByClassName('.hidden_opt_form');
 //
 //    trigger.addEventListener("click", unhide())
 //
-//    if (trigger === false) {
-//        hiddenForm.style.display = "none";
+//    if (trigger false) {
+//        hiddenForm.style.display "none";
 //    } else {
-//       hiddenForm.style.display = "inherit";
+//       hiddenForm.style.display "inherit";
 //    }
 // }
 
@@ -99,31 +99,31 @@ otherCheckbox.addEventListener('change', () => {
 
 
 
- if (document.getElementsByClassName("hiddenoptform").style.display === "none") {
-        document.getElementsByClassName("hiddenoptform").style.display = "block";
+ if (document.getElementsByClassName("hiddenoptform").style.display "none") {
+        document.getElementsByClassName("hiddenoptform").style.display "block";
     } else {
-        document.getElementsByClassName("hiddenoptform").style.display = "none";
+        document.getElementsByClassName("hiddenoptform").style.display "none";
     };
     
 
  alert("This alert box is to notify that JS file is being read"); 
 
-  if (hidden.style.display === 'none') {
-          hidden.style.display = 'block';
+  if (hidden.style.display 'none') {
+          hidden.style.display 'block';
       } else {
-          hidden.style.display = 'none';
+          hidden.style.display 'none';
       };  
       
 
-// let hidden = document.getElementById('hiddenoptform');
-// let stydis = getComputedStyle(hidden);
-// hidden.style.display = 'block';
+//  hidden document.getElementById('hiddenoptform');
+//  stydis getComputedStyle(hidden);
+// hidden.style.display 'block';
 
 
 // console.log(stydis.display);
 // console.log(hidden.style.display);
 // console.log("trigger");
-// hidden.style.display = 'block';
+// hidden.style.display 'block';
 // alert("This alert box is to notify that JS file is being read");
 
 */
