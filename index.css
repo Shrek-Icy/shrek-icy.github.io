@@ -1,163 +1,259 @@
-@media only screen and (min-width: 1111px) {
-    * {
-        box-sizing: content-box;
-    }
-    body {
-        background-image: url("https://preview.redd.it/b3jif8r7d7z61.png?width=3000&format=png&auto=webp&s=29a49676bd8faf92476465b57c131dd081a55b8b");
-        background-size: cover;
-        background-repeat: no-repeat;
-        max-width: max-content;
-        margin: 0px auto;
-    }
-    header {
-        color: rgb(255, 255, 255);
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.70);
-    }
-    header>h1 {
-        padding: 5px 5px;
-        margin: 2.5px 2.5px;
-    }
-    nav {
-        background-color: rgba(0, 0, 0, 0.70);
-        display: flex;
-        justify-content: space-around;
-    }
-    nav>* {
-        text-decoration: none;
-        color: antiquewhite;
-        font-size: 20px;
-        font-weight: 500;
-    }
-    main {
-        color: antiquewhite;
-        border: 5px white solid;
-    }
-    main>* {
-        margin: 10px 15px;
-    }
-    section {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-    }
-    section>* {
-        border: 2px white solid;
-        background-color: rgba(0, 0, 0, 0.70);
-    }
-    .forms h2 {
-        color: rgb(255, 238, 0);
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.70);
-        padding: 5px 10em;
-    }
-    h3 {
-        color: whitesmoke;
-        text-align: center;
-    }
-    footer {
-        color: white;
-        border: 5px white solid;
-        text-align: center;
-    }
-    .track {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        width: -moz-fit-content;
-        width: fit-content;
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 16px;
-    }
-    .stat {
-        border: 5px white solid;
-        display: flex;
-        flex-flow: column wrap;
-    }
-    .stat>div {
-        border: 2px white solid;
-    }
-    .settings {
-        border: 3px white solid;
-        width: 330px;
-        float: left;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.70);
-    }
-    .settings>* {
-        margin: 6px 6px;
-    }
-    .globstat {
-        display: flex;
-    }
-    .globstat>div {
-        border: 2px white solid;
-    }
-    #optform {
-        display: none;
-    }
-    #hiddenoptform {
-        display: none;
-        border: 2px white solid;
-    }
-    #loot {
-        display: none;
-    }
-    #optinfosetting {
-        display: none;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-    }
-    #gamble {
-        display: none;
-    }
-    #events {
-        display: none;
-    }
-    .forms {
-        margin: 0px auto 0px 364px;
-        color: antiquewhite;
-        align-items: center;
-        flex-flow: column wrap;
-        border: 5px white solid;
-        justify-content: space-between;
-        display: flex;
-    }
-    .forms h2 {
-        border: 2px white solid;
-        margin: 6px auto;
-    }
-    .form {
-        width: -moz-fit-content;
-        width: fit-content;
-        margin: 10px 16px;
-    }
-    .form>* {
-        margin: 10px 10px;
-        text-align: center;
-    }
-    .form>h3 {
-        color: salmon;
-    }
-    .disclaimer {
-        padding: 10px 10px;
-        margin: 6px auto;
-        background-color: rgba(0, 0, 0, 0.70);
-        width: 240px;
-        height: 240ps;
-        text-align: center;
-        border: white 2px solid;
-    }
-    .options {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-    }
+* {
+    box-sizing: content-box;
 }
 
-@media only screen and (max-width: 1110px) {
+body {
+    background-image: url("https://preview.redd.it/b3jif8r7d7z61.png?width=3000&format=png&auto=webp&s=29a49676bd8faf92476465b57c131dd081a55b8b");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+}
+
+header {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.70);
+    width: 40%;
+    text-align: center;
+    margin: 0px auto;
+    border: 4px white solid;
+}
+
+header>h1 {
+    padding: 5px 5px;
+    margin: 2.5px 2.5px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.70);
+    display: flex;
+    justify-content: space-around;
+    border: 2px white solid;
+    width: 90%;
+    margin: 0px auto;
+}
+
+nav>* {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+main {
+    color: antiquewhite;
+    border: 5px white solid;
+    display: flex;
+    margin: 0px auto;
+    width: 90%;
+    min-width: 540px;
+}
+
+main>* {
+    margin: 10px 15px;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+section>* {
+    border: 2px white solid;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.forms h2 {
+    color: rgb(255, 238, 0);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.70);
+    padding: 5px 10px;
+    border: 2px white solid;
+    margin: 6px auto;
+    width: 40%;
+}
+
+h3 {
+    color: whitesmoke;
+    text-align: center;
+    Margin: 12px auto;
+}
+
+footer {
+    color: white;
+    border: 5px white solid;
+    text-align: center;
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.70);
+}
+
+.track {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+.stat {
+    border: 5px white solid;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.stat>div {
+    border: 2px white solid;
+}
+
+.settings>* {
+    margin: 6px 6px;
+}
+
+.globstat {
+    display: flex;
+}
+
+.globstat>div {
+    border: 2px white solid;
+}
+
+#optform {
+    display: none;
+}
+
+#hiddenoptform {
+    display: none;
+    border: 2px white solid;
+}
+
+#loot {
+    display: none;
+}
+
+#optinfosetting {
+    display: none;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+#gamble {
+    display: none;
+}
+
+#events {
+    display: none;
+}
+
+.forms {
+    color: antiquewhite;
+    align-items: center;
+    flex-flow: column nowrap;
+    border: 5px white solid;
+    justify-content: space-between;
+    display: flex;
+    width: 80%;
+}
+
+.formone {
+    margin: 10px 16px;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: 2px white solid;
+}
+
+.formtwo {
+    margin: 10px 16px;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: 2px white solid;
+}
+
+.formthree {
+    margin: 10px 16px;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: 2px white solid;
+}
+
+.formfour {
+    margin: 10px 16px;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: 2px white solid;
+}
+
+.formfive {
+    margin: 10px 16px;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.70);
+    border: 2px white solid;
+}
+
+.form>* {
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.form>h3 {
+    color: salmon;
+}
+
+.disclaimer {
+    padding: 10px 10px;
+    margin: 6px 6px;
+    background-color: rgba(0, 0, 0, 0.90);
+    width: auto;
+    height: auto;
+    text-align: center;
+    border: white 2px solid;
+    max-width: 240px;
+}
+
+.options {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    max-width: 240px;
+}
+
+.submitform {
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 4px 6px;
+}
+
+.settings {
+    border: 3px white solid;
+    background-color: rgba(0, 0, 0, 0.70);
+    width: 240px;
+    height: 80%;
+}
+
+.contact {
+    padding: 10px 10px;
+    margin: 6px 6px;
+    background-color: rgba(0, 0, 0, 0.70);
+    width: auto;
+    height: auto;
+    text-align: center;
+    border: white 2px solid;
+    max-width: 240px;
+}
+
+.showallform {
+    font-size: 14px;
+}
+
+
+/* @media only screen and (max-width: 1110px) {
     * {
         box-sizing: content-box;
     }
