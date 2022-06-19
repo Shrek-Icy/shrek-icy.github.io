@@ -36,15 +36,19 @@
 
     <main>
         <!--Settings and Forms-->
-        <section>
+        <div>
             <!--Adult/Child container/next level child-->
             <!--Settings for the Forms-->
             <form class="settings">
+                <div class="options">
+                    <div>
+                        <input type="checkbox" id="optforms" name="optforms" onclick="showOptForms()" value="Additional Forms and Statistics" class="checkbox">
+                        <label for="optforms">Additional Forms</label>
+                    </div>
 
-                <input type="checkbox" id="optforms" name="optforms" onclick="showOptForms()" value="Additional Forms and Statistics" class="checkbox">
-                <label for="optforms">Additional Forms</label>
 
-                <input type="button" id="showallform" class="showallform" value="Open All" onclick="showAllForms()">
+                    <input type="button" id="showallform" class="showallform" value="Open/Close All" onclick="showAllForms()">
+                </div>
 
                 <div id="hiddenoptform">
 
@@ -55,12 +59,15 @@
                         <label for="optionalform">Optional Tracking Form</label>
                         <!-- Optional form settings -->
                         <div id="optinfosetting">
+                            <div>
+                                <input type="checkbox" id="saveinfo" name="saveinfo" value="Save Optional Info">
+                                <label for="saveinfo">Save Optional Info</label>
+                            </div>
 
-                            <input type="checkbox" id="saveinfo" name="saveinfo" value="Save Optional Info">
-                            <label for="saveinfo">Save Optional Info</label>
-
-                            <input type="checkbox" id="useinfo" name="useinfo" value="Use Saved Info">
-                            <label for="useinfo">Use Saved Info</label>
+                            <div>
+                                <input type="checkbox" id="useinfo" name="useinfo" value="Use Saved Info">
+                                <label for="useinfo">Use Saved Info</label>
+                            </div>
 
                         </div>
                     </div>
@@ -88,8 +95,8 @@
                         <label for="specForm">Special Event Tracking Form</label>
 
                     </div>
-
                 </div>
+                <p class="disclaimer">Disclaimer:<br>All information gathered and reported is provided by the community and not the game in anyway.</p>
             </form>
 
             <!-- Forms -->
@@ -100,7 +107,7 @@
                 <div class="track">
                     <section>
                         <!-- Non-Optional Form -->
-                        <div>
+                        <div class="form">
 
                             <h3>Basic Info:</h3>
 
@@ -167,7 +174,7 @@
                         </div>
 
                         <!-- Optional Tracking Info -->
-                        <div id="optform">
+                        <div class="form" id="optform">
 
                             <h3>Additional Info:</h3>
                             <div>
@@ -188,8 +195,8 @@
                         </div>
 
                         <!-- Optional Loot Form -->
-                        <div id="loot">
-                            <h3>Special Loot tracker Form:</h3>
+                        <div class="form" id="loot">
+                            <h3>Loot Form:</h3>
                             <div>
                                 <p>Room 1:</p>
                                 <div>
@@ -253,7 +260,7 @@
                         </div>
 
                         <!-- optional Gambling Form-->
-                        <div id="gamble">
+                        <div class="form" id="gamble">
                             <h3>Gambling Form:</h3>
                             <div>
                                 <p>Room(s):</p>
@@ -298,7 +305,7 @@
                         </div>
 
                         <!-- Optional Event Form-->
-                        <div id="events">
+                        <div class="form" id="events">
                             <h3>Special Events Form:</h3>
                             <div>
                                 <p>Room 1 Event: Y/N?</p>
@@ -359,7 +366,7 @@
                 </div>
                 <input type="button" id="submitform" class="submitform" value="Submit information to be tracked">
             </div>
-        </section>
+        </div>
 
         <!--  Stats View Port
         <div>
@@ -420,7 +427,7 @@
                 <p>Suggestions are appreciated, please keep it positive though!</p>
             </div>
         </div>
-        <div>
+        <div class="disclaimer">
             <h3>Disclaimer:</h3>
             <p> All information gathered and reported is provided by the community and not the game.</p>
         </div>

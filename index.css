@@ -6,6 +6,8 @@
         background-image: url("https://preview.redd.it/b3jif8r7d7z61.png?width=3000&format=png&auto=webp&s=29a49676bd8faf92476465b57c131dd081a55b8b");
         background-size: cover;
         background-repeat: no-repeat;
+        max-width: max-content;
+        margin: 0px auto;
     }
     header {
         color: rgb(255, 255, 255);
@@ -31,12 +33,13 @@
         color: antiquewhite;
         border: 5px white solid;
     }
-    main * {
+    main>* {
         margin: 10px 15px;
     }
     section {
         display: flex;
         flex-flow: row wrap;
+        justify-content: space-evenly;
     }
     section>* {
         border: 2px white solid;
@@ -63,6 +66,9 @@
         justify-content: center;
         width: -moz-fit-content;
         width: fit-content;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 16px;
     }
     .stat {
         border: 5px white solid;
@@ -79,6 +85,9 @@
         position: absolute;
         background-color: rgba(0, 0, 0, 0.70);
     }
+    .settings>* {
+        margin: 6px 6px;
+    }
     .globstat {
         display: flex;
     }
@@ -90,16 +99,16 @@
     }
     #hiddenoptform {
         display: none;
-    }
-    #hiddenoptform>* {
         border: 2px white solid;
     }
     #loot {
         display: none;
     }
     #optinfosetting {
-        border: 3px white solid;
         display: none;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
     }
     #gamble {
         display: none;
@@ -115,10 +124,36 @@
         border: 5px white solid;
         justify-content: space-between;
         display: flex;
-        width: 100%;
     }
     .forms h2 {
         border: 2px white solid;
+        margin: 6px auto;
+    }
+    .form {
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 10px 16px;
+    }
+    .form>* {
+        margin: 10px 10px;
+        text-align: center;
+    }
+    .form>h3 {
+        color: salmon;
+    }
+    .disclaimer {
+        padding: 10px 10px;
+        margin: 6px auto;
+        background-color: rgba(0, 0, 0, 0.70);
+        width: 240px;
+        height: 240ps;
+        text-align: center;
+        border: white 2px solid;
+    }
+    .options {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
     }
 }
 

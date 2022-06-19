@@ -34,7 +34,7 @@ function showOptForm() {
     let currForm = getComputedStyle(document.getElementById('optform')).display; // Current display of hiddenform variable
     on(trigger, "change", function() {
         if (currDisp === "none") {
-            return hidden.style.display = 'block';
+            return hidden.style.display = 'flex';
         } else {
             return hidden.style.display = 'none';
         };
