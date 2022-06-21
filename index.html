@@ -5,9 +5,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Map Portal Tracker</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <script language="javascript" type="text/javascript" src="global.js"></script>
-    <script language="javascript" type="text/javascript" src="openallscript.js"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./Testing/testing.css">
 </head>
 
 <body>
@@ -44,13 +43,13 @@
                 <!--Additional Forms checkbox-->
                 <div>
                     <input type="checkbox" id="optforms" name="optforms" onclick="showOptForms()" value="Additional Forms and Statistics" class="checkbox">
-                    <label for="optforms">Additional Forms</label>
+                    <label for="optforms">More Forms</label>
                 </div>
 
                 <!-- Open/close button-->
                 <input type="button" id="showallform" class="showallform" value="Open/Close All" onclick="showAllForms()">
             </div>
-
+            <br>
             <div id="hiddenoptform">
 
                 <!--Optional Tracking Form button-->
@@ -59,6 +58,7 @@
                     <input type="checkbox" id="optionalform" name="optionalform" value="Optional Tracking Form" onclick="showOptForm()" class="checkbox">
                     <label for="optionalform">Optional Tracking Form</label>
                     <!-- Optional form settings -->
+                    <br>
                     <div id="optinfosetting">
                         <div>
                             <input type="checkbox" id="saveinfo" name="saveinfo" value="Save Optional Info">
@@ -72,7 +72,7 @@
 
                     </div>
                 </div>
-
+                <br>
                 <!--Optional Loot Form button-->
                 <div>
 
@@ -80,7 +80,7 @@
                     <label for="lootform">Loot Tracker Form</label>
 
                 </div>
-
+                <br>
                 <!--Optional Gambling form button-->
                 <div>
 
@@ -88,7 +88,7 @@
                     <label for="gambForm">Gambling Tracking Form</label>
 
                 </div>
-
+                <br>
                 <!--Optional Event Form button-->
                 <div>
 
@@ -125,7 +125,7 @@
                             <option value="Ultima Thule">Ultima Thule</option>
                         </select>
                     </form>
-
+                    <br>
                     <!-- Coords -->
 
                     <!-- Party Size -->
@@ -135,51 +135,56 @@
                     </form>
 
                     <!-- Portal -->
-                    <p>Portal:</p>
-                    <form>
+                    <form id="portal">
+                        <p>Portal:</p>
                         <input type="radio" id="yesportal" name="portal" value="yes">
                         <label for="yesportal">Yes</label>
                         <input type="radio" id="noportal" name="portal" value="no">
-                        <label for="noportal">No</label></form>
-                    <div>
-                        <p>Room 1 Door:</p>
-                        <form>
+                        <label for="noportal">No</label>
+                    </form>
+                    <div id="rmdrs">
+                        <form id="rmonedr">
+                            <p>Room 1 Door:</p>
                             <input type="radio" id="dooroneleft" name="doorone" value="left">
                             <label for="dooroneleft">Left</label>
                             <input type="radio" id="dooroneright" name="doorone" value="right">
                             <label for="dooroneright">Right</label>
-                            <input type="radio" id="dooroneend" name="doorone" value="end">
+                            <input type="checkbox" id="dooroneend" name="doorone" value="end">
                             <label for="dooroneend">End</label>
                         </form>
-                        <p>Room 2 Door:</p>
-                        <form>
+
+                        <form id="rmtwodr">
+                            <p>Room 2 Door:</p>
                             <input type="radio" id="doortwoleft" name="doortwo" value="left">
                             <label for="doortwoleft">Left</label>
                             <input type="radio" id="doortworight" name="doortwo" value="right">
                             <label for="doortworight">Right</label>
-                            <input type="radio" id="doortwoend" name="doortwo" value="end">
+                            <input type="checkbox" id="doortwoend" name="doortwo" value="end">
                             <label for="doortwoend">End</label>
                         </form>
-                        <p>Room 3 Door:</p>
-                        <form>
+
+                        <form id="rmthreedr">
+                            <p>Room 3 Door:</p>
                             <input type="radio" id="doorthreeleft" name="doorthree" value="left">
                             <label for="doorthreeleft">Left</label>
                             <input type="radio" id="doorthreeright" name="doorthree" value="right">
                             <label for="doorthreeright">Right</label>
-                            <input type="radio" id="doorthreeend" name="doorthree" value="end">
+                            <input type="checkbox" id="doorthreeend" name="doorthree" value="end">
                             <label for="doorthreeend">End</label>
                         </form>
-                        <p>Room 4 Door:</p>
-                        <form>
+
+                        <form id="rmfourdr">
+                            <p>Room 4 Door:</p>
                             <input type="radio" id="doorfourleft" name="doorfour" value="left">
                             <label for="doorfourleft">Left</label>
                             <input type="radio" id="doorfourright" name="doorfour" value="right">
                             <label for="doorfourright">Right</label>
-                            <input type="radio" id="doorfourend" name="doorfour" value="end">
+                            <input type="checkbox" id="doorfourend" name="doorfour" value="end">
                             <label for="doorfourend">End</label>
                         </form>
-                        <p>Room 5 Comp:</p>
-                        <form>
+
+                        <form id="rmfive">
+                            <p>Room 5 Compelete:</p>
                             <input type="radio" id="doorfiveyes" name="doorfive" value="yes">
                             <label for="doorfiveyes">Yes</label>
                             <input type="radio" id="doorfiveno" name="doorfive" value="no">
@@ -196,7 +201,7 @@
                         <!-- Data Center -->
                         <form>
                             <label for="datacenter">Data Center:</label>
-                            <select name="datacenter" id="datacenter">
+                            <select name="datacenter" id="datacenter" default="">
                                 <option value="Aether">Aether</option>
                                 <option value="Primal">Primal</option>
                                 <option value="Crystal">Crystal</option>
@@ -208,34 +213,307 @@
                                 <option value="Materia">Materia</option>
                             </select>
                         </form>
-
+                        <br>
                         <!-- World by Data center -->
-                        <!-- Aether -->
                         <form>
-                            <label for="Aether">Aether:</label>
-                            <select name="Aether" id="Aether">
-                                <option value="Adamantoise">Adamantoise</option>
-                                <option value="Cactuar">Cactuar</option>
-                                <option value="Faerie">Faerie</option>
-                                <option value="Gilgamesh">Gilgamesh</option>
-                                <option value="Jenova">Jenova</option>
-                                <option value="Midgardsormr">Midgardsormr</option>
-                                <option value="Sargatanas">Sargatanas</option>
-                                <option value="Siren">Siren</option>
-                            </select>
+                            <!-- Aether -->
+                            <form>
+                                <label for="Aether">World:</label>
+                                <select name="Aether" id="Aether">
+                                    <option value="Adamantoise">Adamantoise</option>
+                                    <option value="Cactuar">Cactuar</option>
+                                    <option value="Faerie">Faerie</option>
+                                    <option value="Gilgamesh">Gilgamesh</option>
+                                    <option value="Jenova">Jenova</option>
+                                    <option value="Midgardsormr">Midgardsormr</option>
+                                    <option value="Sargatanas">Sargatanas</option>
+                                    <option value="Siren">Siren</option>
+                                </select>
+                            </form>
+                            <!-- Primal -->
+                            <form>
+                                <label for="Primal">World:</label>
+                                <select name="Primal" id="Primal">
+                                    <option value="Behemoth">Behemoth</option>
+                                    <option value="Excalibur">Excalibur</option>
+                                    <option value="Exodus">Exodus</option>
+                                    <option value="Famfrit">Famfrit</option>
+                                    <option value="Hyperion">Hyperion</option>
+                                    <option value="Lamia">Lamia</option>
+                                    <option value="Leviathan">Leviathan</option>
+                                    <option value="Ultros">Ultros</option>
+                                </select>
+                            </form>
+                            <!-- Crystal -->
+                            <form>
+                                <label for="Crystal">World:</label>
+                                <select name="Crystal" id="Crystal">
+                                    <option value="Balmung">Balmung</option>
+                                    <option value="Brynhildr">Brynhildr</option>
+                                    <option value="Coeurl">Coeurl</option>
+                                    <option value="Diabolos">Diabolos</option>
+                                    <option value="Goblin">Goblin</option>
+                                    <option value="Malboro">Malboro</option>
+                                    <option value="Mateus">Mateus</option>
+                                    <option value="Zalera">Zalera</option>
+                                </select>
+                            </form>
+                            <!-- Elemental -->
+                            <form>
+                                <label for="Elemental">World:</label>
+                                <select name="Elemental" id="Elemental">
+                                    <option value="Aegis">Aegis</option>
+                                    <option value="Atomos">Atomos</option>
+                                    <option value="Carbuncle">Carbuncle</option>
+                                    <option value="Garuda">Garuda</option>
+                                    <option value="Gungnir">Gungnir</option>
+                                    <option value="Kujata">Kujata</option>
+                                    <option value="Ramuh">Ramuh</option>
+                                    <option value="Tonberry">Tonberry</option>
+                                    <option value="Typhon">Typhon</option>
+                                    <option value="Unicorn">Unicorn</option>
+                                </select>
+                            </form>
+                            <!-- Gaia -->
+                            <form>
+                                <label for="Gaia">World:</label>
+                                <select name="Gaia" id="Gaia">
+                                    <option value="Alexander">Alexander</option>
+                                    <option value="Bahamut">Bahamut</option>
+                                    <option value="Durandal">Durandal</option>
+                                    <option value="Fenrir">Fenrir</option>
+                                    <option value="Ifrit">Ifrit</option>
+                                    <option value="Ridill">Ridill</option>
+                                    <option value="Tiamat">Tiamat</option>
+                                    <option value="Ultima">Ultima</option>
+                                    <option value="Valefor">Valefor</option>
+                                    <option value="Yojimbo">Yojimbo</option>
+                                    <option value="Zeromus">Zeromus</option>
+                                </select>
+                            </form>
+                            <!-- Mana -->
+                            <form>
+                                <label for="Mana">World:</label>
+                                <select name="Mana" id="Mana">
+                                    <option value="Anima">Anima</option>
+                                    <option value="Asura">Asura</option>
+                                    <option value="Belias">Belias</option>
+                                    <option value="Chocobo">Chocobo</option>
+                                    <option value="Hades">Hades</option>
+                                    <option value="Ixion">Ixion</option>
+                                    <option value="Mandragora">Mandragora</option>
+                                    <option value="Masamune">Masamune</option>
+                                    <option value="Pandaemonium">Pandaemonium</option>
+                                    <option value="Shinryu">Shinryu</option>
+                                    <option value="Titan">Titan</option>
+                                </select>
+                            </form>
+                            <!-- Chaos -->
+                            <form>
+                                <label for="Chaos">World:</label>
+                                <select name="Chaos" id="Chaos">
+                                    <option value="Cerberus">Cerberus</option>
+                                    <option value="Louisoix">Louisoix</option>
+                                    <option value="Moogle">Moogle</option>
+                                    <option value="Omega">Omega</option>
+                                    <option value="Ragnarok">Ragnarok</option>
+                                    <option value="Spriggan">Spriggan</option>
+                                </select>
+                            </form>
+                            <!-- Light -->
+                            <form>
+                                <label for="Light">World:</label>
+                                <select name="Light" id="Light">
+                                    <option value="Lich">Lich</option>
+                                    <option value="Odin">Odin</option>
+                                    <option value="Phoenix">Phoenix</option>
+                                    <option value="Shiva">Shiva</option>
+                                    <option value="Twintania">Twintania</option>
+                                    <option value="Zodiark">Zodiark</option>
+                                </select>
+                            </form>
+                            <!-- Materia -->
+                            <form>
+                                <label for="Materia">World:</label>
+                                <select name="Materia" id="Materia">
+                                    <option value="Bismarck">Bismarck</option>
+                                    <option value="Ravana">Ravana</option>
+                                    <option value="Sephirot">Sephirot</option>
+                                    <option value="Sophia">Sophia</option>
+                                    <option value="Zurvan">Zurvan</option>
+                                </select>
+                            </form>
+                        </form>
+                        <br>
+                        <!-- Character name for tracking -->
+                        <label for="charname">Character Name:</label>
+                        <br>
+                        <input type="text" id="charname" name="charname">
+                        <br>
+                        <!-- Playstle options -->
+                        <form>
+                            <div>
+                                <p>Playstyle?</p>
+                                <input type="radio" id="yesplaystyle" name="playstyle" value="yes">
+                                <label for="yesplaystyle">Yes</label>
+                                <input type="radio" id="noplaystyle" name="playstyle" value="no">
+                                <label for="noplaystyle">No</label>
+                            </div>
+                            <br>
+                            <div>
+                                <!-- Playstyle one-->
+                                <form>
+                                    <label for="styleone">Style:</label>
+                                    <select name="styleone" id="styleone">
+                                        <option value="MSQ">MSQ</option>
+                                        <option value="DungeonsTrials">Dungeons & Trials</option>
+                                        <option value="Raids">Raids</option>
+                                        <option value="PotDHoH">PotD/HoH</option>
+                                        <option value="PvP">PvP</option>
+                                        <option value="TreasureMaps">Treasure Maps</option>
+                                        <option value="Hunts">Hunts</option>
+                                        <option value="Crafting">Crafting</option>
+                                        <option value="Gathering">Gathering</option>
+                                        <option value="RP">RP</option>
+                                        <option value="Casual">Casual</option>
+                                        <option value="Hardcore">Hardcore</option>
+                                        <option value="Sprout/Mentor">Sprout/Mentor</option>
+                                        <option value="Economy">Economy</option>
+                                        <option value="Housing">Housing</option>
+                                        <option value="Performances">Performances</option>
+                                        <option value="Glamour">Glamour</option>
+                                        <option value="GPose">GPose</option>
+                                        <option value="Social">Social</option>
+                                    </select>
+                                </form>
+                                <!-- Playstyle Two-->
+                                <form>
+                                    <label for="styletwo">Style:</label>
+                                    <select name="styletwo" id="styletwo">
+                                        <option value="MSQ">MSQ</option>
+                                        <option value="DungeonsTrials">Dungeons & Trials</option>
+                                        <option value="Raids">Raids</option>
+                                        <option value="PotDHoH">PotD/HoH</option>
+                                        <option value="PvP">PvP</option>
+                                        <option value="TreasureMaps">Treasure Maps</option>
+                                        <option value="Hunts">Hunts</option>
+                                        <option value="Crafting">Crafting</option>
+                                        <option value="Gathering">Gathering</option>
+                                        <option value="RP">RP</option>
+                                        <option value="Casual">Casual</option>
+                                        <option value="Hardcore">Hardcore</option>
+                                        <option value="Sprout/Mentor">Sprout/Mentor</option>
+                                        <option value="Economy">Economy</option>
+                                        <option value="Housing">Housing</option>
+                                        <option value="Performances">Performances</option>
+                                        <option value="Glamour">Glamour</option>
+                                        <option value="GPose">GPose</option>
+                                        <option value="Social">Social</option>
+                                    </select>
+                                </form>
+                                <!-- Playstyle Three-->
+                                <form>
+                                    <label for="stylethree">Style:</label>
+                                    <select name="stylethree" id="stylethree">
+                                        <option value="MSQ">MSQ</option>
+                                        <option value="DungeonsTrials">Dungeons & Trials</option>
+                                        <option value="Raids">Raids</option>
+                                        <option value="PotDHoH">PotD/HoH</option>
+                                        <option value="PvP">PvP</option>
+                                        <option value="TreasureMaps">Treasure Maps</option>
+                                        <option value="Hunts">Hunts</option>
+                                        <option value="Crafting">Crafting</option>
+                                        <option value="Gathering">Gathering</option>
+                                        <option value="RP">RP</option>
+                                        <option value="Casual">Casual</option>
+                                        <option value="Hardcore">Hardcore</option>
+                                        <option value="Sprout/Mentor">Sprout/Mentor</option>
+                                        <option value="Economy">Economy</option>
+                                        <option value="Housing">Housing</option>
+                                        <option value="Performances">Performances</option>
+                                        <option value="Glamour">Glamour</option>
+                                        <option value="GPose">GPose</option>
+                                        <option value="Social">Social</option>
+                                    </select>
+                                </form>
+                                <!-- Playstyle Four-->
+                                <form>
+                                    <label for="stylefour">Style:</label>
+                                    <select name="stylefour" id="stylefour">
+                                        <option value="MSQ">MSQ</option>
+                                        <option value="DungeonsTrials">Dungeons & Trials</option>
+                                        <option value="Raids">Raids</option>
+                                        <option value="PotDHoH">PotD/HoH</option>
+                                        <option value="PvP">PvP</option>
+                                        <option value="TreasureMaps">Treasure Maps</option>
+                                        <option value="Hunts">Hunts</option>
+                                        <option value="Crafting">Crafting</option>
+                                        <option value="Gathering">Gathering</option>
+                                        <option value="RP">RP</option>
+                                        <option value="Casual">Casual</option>
+                                        <option value="Hardcore">Hardcore</option>
+                                        <option value="Sprout/Mentor">Sprout/Mentor</option>
+                                        <option value="Economy">Economy</option>
+                                        <option value="Housing">Housing</option>
+                                        <option value="Performances">Performances</option>
+                                        <option value="Glamour">Glamour</option>
+                                        <option value="GPose">GPose</option>
+                                        <option value="Social">Social</option>
+                                    </select>
+                                </form>
+                                <!-- Playstyle five-->
+                                <form>
+                                    <label for="stylefive">Style:</label>
+                                    <select name="stylefive" id="stylefive">
+                                        <option value="MSQ">MSQ</option>
+                                        <option value="DungeonsTrials">Dungeons & Trials</option>
+                                        <option value="Raids">Raids</option>
+                                        <option value="PotDHoH">PotD/HoH</option>
+                                        <option value="PvP">PvP</option>
+                                        <option value="TreasureMaps">Treasure Maps</option>
+                                        <option value="Hunts">Hunts</option>
+                                        <option value="Crafting">Crafting</option>
+                                        <option value="Gathering">Gathering</option>
+                                        <option value="RP">RP</option>
+                                        <option value="Casual">Casual</option>
+                                        <option value="Hardcore">Hardcore</option>
+                                        <option value="Sprout/Mentor">Sprout/Mentor</option>
+                                        <option value="Economy">Economy</option>
+                                        <option value="Housing">Housing</option>
+                                        <option value="Performances">Performances</option>
+                                        <option value="Glamour">Glamour</option>
+                                        <option value="GPose">GPose</option>
+                                        <option value="Social">Social</option>
+                                    </select>
+                                </form>
+                                <!-- Playstyle Six-->
+                                <form>
+                                    <label for="stylesix">Style:</label>
+                                    <select name="stylesix" id="stylesix">
+                                        <option value="MSQ">MSQ</option>
+                                        <option value="DungeonsTrials">Dungeons & Trials</option>
+                                        <option value="Raids">Raids</option>
+                                        <option value="PotDHoH">PotD/HoH</option>
+                                        <option value="PvP">PvP</option>
+                                        <option value="TreasureMaps">Treasure Maps</option>
+                                        <option value="Hunts">Hunts</option>
+                                        <option value="Crafting">Crafting</option>
+                                        <option value="Gathering">Gathering</option>
+                                        <option value="RP">RP</option>
+                                        <option value="Casual">Casual</option>
+                                        <option value="Hardcore">Hardcore</option>
+                                        <option value="Sprout/Mentor">Sprout/Mentor</option>
+                                        <option value="Economy">Economy</option>
+                                        <option value="Housing">Housing</option>
+                                        <option value="Performances">Performances</option>
+                                        <option value="Glamour">Glamour</option>
+                                        <option value="GPose">GPose</option>
+                                        <option value="Social">Social</option>
+                                    </select>
+                                </form>
+                            </div>
                         </form>
 
-                        <p>World:</p>
-                        <p>Character Name:</p>
-                        <p>Playstyles:</p>
-                        <div>
-                            <p>Style</p>
-                            <p>Style</p>
-                            <p>Style</p>
-                            <p>Style</p>
-                            <p>Style</p>
-                            <p>Style</p>
-                        </div>
                     </div>
 
                 </div>
@@ -416,6 +694,13 @@
     </main>
 
     <br>
+    <article>
+        <!--Stats View Port-->
+        <h2>Character Name Search:</h2>
+        <h2>Statistics:</h2>
+
+    </article>
+    <br>
 
     <footer id="contact">
         <div class="contact">
@@ -426,10 +711,12 @@
             </div>
         </div>
         <div class="disclaimer">
-            <p>Disclaimer:<br>All information gathered and reported is provided by the community and not the game in anyway.</p>
+            <p>Disclaimer:<br>All information gathered and reported is provided by the community and not the game in anyway.
+            </p>
         </div>
-
     </footer>
+    <script language="javascript" type="text/javascript" src="./JS/global.js"></script>
+    <script language="javascript" type="text/javascript" src="./JS/formone.js"></script>
 </body>
 
 </html>
