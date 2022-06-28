@@ -15,8 +15,7 @@
     <header>
         <!--Adult/Child container/next level child-->
         <h1>Treasure Map Tracker</h1>
-        <h1>(Timeworn Kumbhi-raskin Map)</h1>
-
+        <h1>(Timeworn Kumbhiraskin Map)</h1>
     </header>
 
     <br>
@@ -54,12 +53,13 @@
 
                 <!--Optional Tracking Form button-->
                 <div>
-
+                    <br>
                     <input type="checkbox" id="optionalform" name="optionalform" value="Optional Tracking Form" onclick="showOptForm()" class="checkbox">
                     <label for="optionalform">Optional Tracking Form</label>
                     <!-- Optional form settings -->
                     <br>
                     <div id="optinfosetting">
+                        <br>
                         <div>
                             <input type="checkbox" id="saveinfo" name="saveinfo" value="Save Optional Info">
                             <label for="saveinfo">Save Info</label>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <br>
-                <!--Optional Loot Form button-->
+                <!--Optional Loot Form button
                 <div>
 
                     <input type="checkbox" id="lootform" name="Lootform" value="Loot" onclick="showLootForm()" class="checkbox">
@@ -81,7 +81,8 @@
 
                 </div>
                 <br>
-                <!--Optional Gambling form button-->
+                <!-- Additonal non used stuff
+                    Optional Gambling form button
                 <div>
 
                     <input type="checkbox" id="gambForm" name="gambForm" value="gambling" onclick="showGambleForm()" class="checkbox">
@@ -89,13 +90,15 @@
 
                 </div>
                 <br>
-                <!--Optional Event Form button-->
+                Optional Event Form button
                 <div>
 
                     <input type="checkbox" id="specForm" name="specForm" value="special" onclick="showEventForm()" class="checkbox">
                     <label for="specForm">Special Event Tracking Form</label>
 
                 </div>
+            -->
+
             </div>
             <p class="disclaimer">Disclaimer:<br>All information gathered and reported is provided by the community and not the game in anyway.</p>
         </form>
@@ -202,6 +205,7 @@
                         <form>
                             <label for="datacenter">Data Center:</label>
                             <select name="datacenter" id="datacenter" default="">
+                                <option value="None"></option>
                                 <option value="Aether">Aether</option>
                                 <option value="Primal">Primal</option>
                                 <option value="Crystal">Crystal</option>
@@ -215,9 +219,15 @@
                         </form>
                         <br>
                         <!-- World by Data center -->
-                        <form>
+                        <form id="dczero">
+                            <form id="dczero">
+                                <label for="Default" id="dczero">World:</label>
+                                <select name="Default" id="dczero">
+                                    <option value=""></option>
+                                </select>
+                            </form>
                             <!-- Aether -->
-                            <form>
+                            <form id="dcone">
                                 <label for="Aether">World:</label>
                                 <select name="Aether" id="Aether">
                                     <option value="Adamantoise">Adamantoise</option>
@@ -231,7 +241,7 @@
                                 </select>
                             </form>
                             <!-- Primal -->
-                            <form>
+                            <form id="dctwo">
                                 <label for="Primal">World:</label>
                                 <select name="Primal" id="Primal">
                                     <option value="Behemoth">Behemoth</option>
@@ -245,7 +255,7 @@
                                 </select>
                             </form>
                             <!-- Crystal -->
-                            <form>
+                            <form id="dcthree">
                                 <label for="Crystal">World:</label>
                                 <select name="Crystal" id="Crystal">
                                     <option value="Balmung">Balmung</option>
@@ -259,7 +269,7 @@
                                 </select>
                             </form>
                             <!-- Elemental -->
-                            <form>
+                            <form id="dcfour">
                                 <label for="Elemental">World:</label>
                                 <select name="Elemental" id="Elemental">
                                     <option value="Aegis">Aegis</option>
@@ -275,7 +285,7 @@
                                 </select>
                             </form>
                             <!-- Gaia -->
-                            <form>
+                            <form id="dcfive">
                                 <label for="Gaia">World:</label>
                                 <select name="Gaia" id="Gaia">
                                     <option value="Alexander">Alexander</option>
@@ -292,7 +302,7 @@
                                 </select>
                             </form>
                             <!-- Mana -->
-                            <form>
+                            <form id="dcsix">
                                 <label for="Mana">World:</label>
                                 <select name="Mana" id="Mana">
                                     <option value="Anima">Anima</option>
@@ -309,7 +319,7 @@
                                 </select>
                             </form>
                             <!-- Chaos -->
-                            <form>
+                            <form id="dcseven">
                                 <label for="Chaos">World:</label>
                                 <select name="Chaos" id="Chaos">
                                     <option value="Cerberus">Cerberus</option>
@@ -321,7 +331,7 @@
                                 </select>
                             </form>
                             <!-- Light -->
-                            <form>
+                            <form id="dceight">
                                 <label for="Light">World:</label>
                                 <select name="Light" id="Light">
                                     <option value="Lich">Lich</option>
@@ -333,7 +343,7 @@
                                 </select>
                             </form>
                             <!-- Materia -->
-                            <form>
+                            <form id="dcnine">
                                 <label for="Materia">World:</label>
                                 <select name="Materia" id="Materia">
                                     <option value="Bismarck">Bismarck</option>
@@ -360,7 +370,7 @@
                                 <label for="noplaystyle">No</label>
                             </div>
                             <br>
-                            <div>
+                            <div id="playstyles">
                                 <!-- Playstyle one-->
                                 <form>
                                     <label for="styleone">Style:</label>
@@ -518,7 +528,7 @@
 
                 </div>
 
-                <!-- Optional Loot Form -->
+                <!-- Optional Loot Form 
                 <div class="formthree" id="loot">
                     <h3>Loot Form:</h3>
                     <div>
@@ -583,7 +593,9 @@
                     </div>
                 </div>
 
-                <!-- optional Gambling Form-->
+
+                <!-- Additional Non used forms 
+                 optional Gambling Form
                 <div class="formfour" id="gamble">
                     <h3>Gambling Form:</h3>
                     <div>
@@ -628,7 +640,7 @@
                     </div>
                 </div>
 
-                <!-- Optional Event Form-->
+                 Optional Event Form
                 <div class="formfive" id="events">
                     <h3>Special Events Form:</h3>
                     <div>
@@ -686,6 +698,7 @@
                         </div>
                     </div>
                 </div>
+            -->
 
             </div>
             <input type="button" id="submitform" class="submitform" value="Submit information to be tracked">
@@ -717,6 +730,7 @@
     </footer>
     <script language="javascript" type="text/javascript" src="./JS/global.js"></script>
     <script language="javascript" type="text/javascript" src="./JS/formone.js"></script>
+    <script language="javascript" type="text/javascript" src="./JS/formtwo.js"></script>
 </body>
 
 </html>

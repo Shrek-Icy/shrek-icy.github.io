@@ -140,24 +140,24 @@ function showAllForms() {
         optFormCb.checked = true;
         optFmSub.style.display = "flex";
         optFormFm.style.display = "block";
-        lootFormCb.checked = true;
-        lootFm.style.display = "block";
-        gambFormCb.checked = true;
-        gambFm.style.display = "block";
-        eventCb.checked = true;
-        eventFm.style.display = "block";
+        //lootFormCb.checked = true;
+        //lootFm.style.display = "block";
+        // gambFormCb.checked = true;
+        // gambFm.style.display = "block";
+        // eventCb.checked = true;
+        // eventFm.style.display = "block";
     } else {
         showAddForm.checked = false;
         hidden.style.display = "none";
         optFormCb.checked = false;
         optFmSub.style.display = "none";
         optFormFm.style.display = "none";
-        lootFormCb.checked = false;
-        lootFm.style.display = "none";
-        gambFormCb.checked = false;
-        gambFm.style.display = "none";
-        eventCb.checked = false;
-        eventFm.style.display = "none";
+        // lootFormCb.checked = false;
+        //lootFm.style.display = "none";
+        // gambFormCb.checked = false;
+        // gambFm.style.display = "none";
+        // eventCb.checked = false;
+        // eventFm.style.display = "none";
     }
 };
 

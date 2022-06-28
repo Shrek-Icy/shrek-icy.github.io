@@ -41,12 +41,14 @@ doorOneRight.addEventListener('click', function() {
 });
 
 doorOneEnd.addEventListener('change', function() {
-    if (rmTwoDr.style.display === 'block') {
+    if (doorOneLeft.checked === true || doorOneRight.checked === true) {
         rmTwoDr.style.display = 'none'
     } else {
-        rmTwoDr.style.display = 'block'
+        rmTwoDr.style.display = 'none'
     };
 });
+
+
 
 // Room two door question scripts
 
@@ -72,10 +74,10 @@ doorTwoRight.addEventListener('click', function() {
 });
 
 doorTwoEnd.addEventListener('change', function() {
-    if (rmThreeDr.style.display === 'block') {
+    if (doorTwoLeft.checked === true || doorTwoRight.checked === true) {
         rmThreeDr.style.display = 'none'
     } else {
-        rmThreeDr.style.display = 'block'
+        rmThreeDr.style.display = 'none'
     };
 });
 
@@ -103,10 +105,10 @@ doorThreeRight.addEventListener('click', function() {
 });
 
 doorThreeEnd.addEventListener('change', function() {
-    if (rmFourDr.style.display === 'block') {
+    if (doorThreeLeft.checked === true || doorThreeRight.checked === true) {
         rmFourDr.style.display = 'none'
     } else {
-        rmFourDr.style.display = 'block'
+        rmFourDr.style.display = 'none'
     };
 });
 
@@ -134,9 +136,9 @@ doorFourRight.addEventListener('click', function() {
 });
 
 doorFourEnd.addEventListener('change', function() {
-    if (rmFiveDr.style.display === 'block') {
+    if (doorFourLeft.checked === true || doorFourRight.checked === true) {
         rmFiveDr.style.display = 'none'
     } else {
-        rmFiveDr.style.display = 'block'
+        rmFiveDr.style.display = 'none'
     };
 });

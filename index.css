@@ -222,7 +222,7 @@ footer {
 .options {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     max-width: 240px;
 }
 
@@ -252,4 +252,85 @@ footer {
 
 .showallform {
     font-size: 14px;
+    padding: 4px 6px;
+}
+
+#rmonedr {
+    display: none;
+}
+
+#rmtwodr {
+    display: none;
+}
+
+#rmthreedr {
+    display: none;
+}
+
+#rmfourdr {
+    display: none;
+}
+
+#rmfive {
+    display: none;
+}
+
+article {
+    width: 90%;
+    border: 4px white solid;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: stretch;
+    color: white;
+    min-height: 199px;
+}
+
+article>h2 {
+    border: 2px white solid;
+    height: 100%;
+}
+
+#dczero {
+    display: block;
+}
+
+#dcone {
+    display: none;
+}
+
+#dctwo {
+    display: none;
+}
+
+#dcthree {
+    display: none;
+}
+
+#dcfour {
+    display: none;
+}
+
+#dcfive {
+    display: none;
+}
+
+#dcsix {
+    display: none;
+}
+
+#dcseven {
+    display: none;
+}
+
+#dceight {
+    display: none;
+}
+
+#dcnine {
+    display: none;
+}
+
+#playstyles {
+    display: none;
 }
